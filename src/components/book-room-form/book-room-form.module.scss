@@ -1,0 +1,92 @@
+@use "../../styles/functions" as *;
+@use "../../styles/variables" as *;
+.form_container {
+    @media (min-width: $device-lg) {
+        padding: 32px 179px;
+    }
+    width: 100%;
+    .form {
+        position: relative;
+    }
+    .date {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @media (min-width: $device-md) {
+            flex-direction: row;
+        }
+        // background-color: red;
+        width: 100%;
+        .date_group {
+            width: 100%;
+            margin-bottom: 24px;
+            @media (min-width: $device-md) {
+                width: 49%;
+            }
+        }
+        .datePicker_container {
+            width: 100%;
+            // // padding: 12.5px 8.5px;
+            // border: 1px solid $light;
+            // border-radius: 8px;
+            position: relative;
+            i {
+                position: absolute;
+                left: 16.5px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2;
+            }
+            .datePicker {
+                width: 100% !important;
+                border: 1px solid $light;
+                box-shadow: none !important;
+                font-size: toRem(14);
+                position: relative;
+                padding: 12.5px 8.5px;
+                border-radius: 8px;
+                color: $secondary;
+                &:focus {
+                    outline: 1px solid $primary;
+                    // border: 1px solid $primary !important;
+                }
+            }
+            .error {
+                outline: 1px solid $fav !important;
+            }
+        }
+    }
+    .label {
+        margin-bottom: 6px;
+        font-size: toRem(14);
+        line-height: 24px;
+        color: $secondary;
+        span {
+            color: $fav;
+        }
+    }
+    .comments {
+        height: 158px !important;
+        padding: 8.5px;
+        font-size: toRem(14);
+        line-height: 24px;
+        color: $secondary;
+        border-radius: 8px;
+    }
+    .button {
+        margin: 0 auto;
+        width: 176px;
+    }
+    .error,
+    .date_error {
+        color: $fav;
+        font-size: toRem(12);
+        position: absolute;
+        // bottom: 0;
+    }
+    .date_error {
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+    }
+}

@@ -1,0 +1,45 @@
+// $primary: #013ca6;
+// $secondary: #1e1f31;
+// $dark: #212529;
+// $gold: #a66701;
+// $fav: #e30000;
+// $white: #ffffff;
+// $light: #d2d2d2;
+@use "variables" as *;
+@forward "globals";
+@forward "utils";
+@forward "mixins";
+@forward "functions";
+@forward "icons";
+@forward "components/bages";
+@forward "components/buttons";
+@forward "components/navbar";
+@forward "components/inputs";
+@forward "components/filter";
+@forward "screens/auth-page";
+@forward "components/datePicker";
+@forward "components/swiper";
+@forward "components/react-select";
+@forward "components/modals";
+@forward "components/tabs";
+$spacer: 1rem;
+@forward "~bootstrap/scss/bootstrap"
+  with(
+    $theme-colors: (
+      "primary": $primary,
+      "secondary": $secondary,
+      "light": $white,
+      "darkGrey": $dark-grey,
+      "danger": $fav,
+      "warning": $gold,
+    ),
+    $spacers: (
+      0: 0,
+      1: $spacer,
+      2: $spacer * 1.5,
+      3: $spacer * 2,
+      4: $spacer * 2.5,
+      5: $spacer * 4,
+      6: $spacer * 0.5,
+    )
+  );

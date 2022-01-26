@@ -1,0 +1,15 @@
+@use "../../styles/functions" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+.chat_container {
+    width: 100%;
+    background-color: #f7f7f7;
+    display: flex;
+    padding: 0px !important;
+    border-radius: 8px;
+    // overflow-x: scroll;
+    flex-direction: column;
+    @media (min-width: $device-md) {
+        flex-direction: row;
+    }
+}

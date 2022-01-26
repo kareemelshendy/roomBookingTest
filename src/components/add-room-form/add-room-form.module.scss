@@ -1,0 +1,208 @@
+@use "../../styles/functions" as *;
+@use "../../styles/variables" as *;
+.create_room {
+    position: relative;
+    .input_cont {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+        @media (min-width: $device-md) {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        .right {
+            width: 100%;
+            margin-bottom: 16px;
+            @media (min-width: $device-md) {
+                margin-bottom: 0px;
+                width: 39%;
+            }
+        }
+        .group {
+            position: relative;
+            p {
+                position: absolute;
+                top: 55%;
+                left: 10px;
+                font-size: toRem(14);
+                line-height: 24px;
+                color: $light-grey;
+            }
+        }
+        .label,
+        .label_left {
+            font-size: toRem(14);
+            color: $secondary;
+            line-height: 24px;
+            span {
+                color: $fav;
+                margin-right: 2px;
+            }
+        }
+        .label {
+            margin-bottom: 6px;
+        }
+        .label_left {
+            margin-bottom: 12px;
+        }
+        .input {
+            border-radius: 8px;
+            font-size: toRem(14);
+            padding: 12.5px 8.5px;
+        }
+        .textarea {
+            height: 166px;
+            padding: 12px 8px;
+            border-radius: 8px;
+            font-size: toRem(14);
+        }
+        .left {
+            // width: 48%;
+            width: 100%;
+            @media (min-width: $device-md) {
+                width: 48%;
+            }
+            .services {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .map {
+                width: 100%;
+                height: 185px;
+            }
+        }
+        .image_cont {
+            display: flex;
+            flex-direction: column;
+            .addImage {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .image_message {
+                font-weight: 700;
+                color: $fav;
+            }
+            .image_box {
+                border: 1px solid $light;
+                width: 84px;
+                height: 84px;
+                border-radius: 8px;
+                position: relative;
+                @media (min-width: $device-lg) {
+                    flex-wrap: nowrap;
+                }
+                .error {
+                    color: $fav;
+                    font-size: toRem(11);
+                    position: absolute;
+                    bottom: -20px;
+                    right: 0;
+                }
+                input {
+                    display: none;
+                }
+                button {
+                    border: none;
+                    background-color: $white;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 8px;
+                    position: relative;
+                }
+                i {
+                    font-size: 32px;
+                    font-weight: 400;
+                    color: $light;
+                }
+            }
+        }
+    }
+    .submit_button {
+        margin: 0 auto;
+        width: 176px;
+    }
+    .error {
+        color: $fav;
+        font-size: toRem(12);
+        position: absolute;
+        // bottom: 0;
+    }
+    .maxImageNumber {
+        color: $fav;
+        font-size: toRem(12);
+    }
+    .servicesError {
+        color: $fav;
+        font-size: toRem(12);
+        position: absolute;
+        bottom: -3px;
+    }
+}
+
+.image_button {
+    border: 1px solid $light;
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    .image {
+        border-radius: 8px;
+        width: 100%;
+        object-fit: cover;
+        // height: 100%;
+        // position: relative;
+    }
+    .delete {
+        position: absolute;
+        left: 10px;
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        i {
+            font-size: 20px;
+            color: $light;
+        }
+    }
+    button {
+        border: none;
+        background-color: $white;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        position: relative;
+    }
+    i {
+        font-size: 32px;
+        font-weight: 400;
+        color: $light;
+    }
+    &:not(:last-child) {
+        margin-left: 8.5px;
+        margin-bottom: 10px;
+        @media (min-width: $device-sm) {
+            margin-bottom: 0px;
+        }
+        @media (min-width: $device-md) {
+            margin-bottom: 10px;
+        }
+        @media (min-width: $device-lg) {
+            margin-bottom: 0px;
+            // margin-left: 0px;
+        }
+    }
+}
+
+.images {
+    display: flex;
+    width: 100%;
+    // background-color: red;
+    flex-wrap: wrap;
+    @media (min-width: $device-lg) {
+        // justify-content: space-between;
+    }
+}

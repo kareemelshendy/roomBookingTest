@@ -1,0 +1,127 @@
+@use "../variables" as *;
+@use "../functions" as *;
+.react-select {
+    &__control {
+        cursor: pointer !important;
+        border: none !important;
+        min-height: 20px !important;
+        margin-right: 8px !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        @media (min-width: $device-lg) {
+            margin-right: 26px !important;
+        }
+    }
+    &__indicator-separator {
+        display: none !important;
+    }
+    &__indicators {
+        display: none !important;
+    }
+    &__input-container {
+        height: 100% !important;
+        width: 100px !important;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    &__single-value {
+        font-size: toRem(14) !important;
+        color: $light-grey !important;
+    }
+    &__placeholder {
+        font-size: toRem(14) !important;
+        color: $light-grey !important;
+        line-height: 24px !important;
+    }
+    &__menu {
+        width: 274px !important;
+    }
+    &__option {
+        font-size: toRem(14) !important;
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+        &:hover,
+        &--is-selected,
+        &--is-focused {
+            background-color: #fbfbfb !important;
+            color: #000 !important;
+        }
+    }
+}
+
+.sort-select {
+    &__control {
+        padding: 10px 20px;
+        border-radius: 8px !important;
+        border-color: $light-grey !important;
+    }
+    &__value-container {
+        font-size: toRem(14);
+        line-height: 24px;
+        color: $secondary !important;
+    }
+}
+
+.number-select,
+.error-select {
+    &__control {
+        padding: 5px 2px !important;
+        border-radius: 8px !important;
+        border-color: $light !important;
+        box-shadow: none !important;
+        &--is-focused {
+            border-color: $primary !important;
+        }
+    }
+    &__value-container {
+        font-size: toRem(14);
+        line-height: 24px;
+        input {
+            color: $secondary !important;
+        }
+    }
+    &__placeholder {
+        color: $light !important;
+    }
+}
+
+.sort-select,
+.number-select {
+    &__indicator-separator {
+        display: none !important;
+    }
+    &__dropdown-indicator {
+        color: $secondary !important;
+    }
+    &__menu {
+        font-size: toRem(14);
+        font-weight: 400 !important;
+    }
+    &__option {
+        padding: 4px 20px !important;
+        &:hover,
+        &--is-selected,
+        &--is-focused {
+            background-color: #fbfbfb !important;
+            color: #000 !important;
+        }
+    }
+}
+
+.number-select {
+    &__control {
+        border-color: $light !important;
+        &--is-focused {
+            border-color: $primary !important;
+        }
+    }
+}
+
+.error-select {
+    &__control {
+        border-color: $fav !important;
+        &--is-focused {
+            border-color: $fav !important;
+        }
+    }
+}

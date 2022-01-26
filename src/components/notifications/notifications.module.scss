@@ -1,0 +1,32 @@
+@use "../../styles/functions" as *;
+@use "../../styles/variables" as *;
+.notifications {
+    width: 100%;
+    border-radius: 8px;
+    .link:hover>.notification {
+        background-color: #F9F9F9;
+    }
+    .notification {
+        padding: 24px;
+        border-bottom: 1px solid $light;
+        &_title,
+        &_time {
+            line-height: 32px;
+            color: $secondary;
+        }
+        &_title {
+            font-size: toRem(16);
+            margin-bottom: 4px;
+        }
+        &_time {
+            font-size: toRem(14);
+            margin-bottom: 0px;
+            span {
+                margin-left: 4px;
+            }
+        }
+    }
+    .new {
+        background-color: #F9F9F9;
+    }
+}

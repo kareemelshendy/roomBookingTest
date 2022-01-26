@@ -1,0 +1,107 @@
+@use "./variables" as *;
+@use "./functions" as *;
+.heading {
+    line-height: 32px;
+    font-family: "Cairo";
+    margin: 0px;
+    padding: 0px;
+    // direction: rtl;
+    &-1 {
+        font-size: toRem(20);
+        @media (min-width: $device-md) {
+            font-size: toRem(28);
+        }
+    }
+    &-2 {
+        font-size: toRem(24);
+    }
+    &-3 {
+        font-size: toRem(16);
+        @media (min-width: $device-md) {
+            font-size: toRem(20);
+        }
+    }
+    &-4 {
+        font-size: toRem(16);
+    }
+    &-5 {
+        font-size: toRem(14);
+    }
+    &-normal {
+        font-weight: 400;
+    }
+    &-semiBold {
+        font-weight: 600;
+    }
+    &-bold {
+        font-weight: 700;
+    }
+    &-white {
+        color: #fff;
+    }
+    &-dark {
+        color: $dark !important;
+    }
+    &-secondary {
+        color: $secondary !important;
+    }
+    &-primary {
+        color: $primary !important;
+    }
+    &-lightGrey {
+        color: $light-grey !important;
+    }
+    &-darkGrey {
+        color: $dark-grey !important;
+    }
+}
+
+.btn-p {
+    padding: 11px 0px !important;
+}
+
+.border-r {
+    border-radius: 8px !important;
+}
+
+.p-9 {
+    padding: 9px 0px !important;
+}
+
+.p {
+    &-small {
+        font-size: toRem(12);
+    }
+    &-md {
+        font-size: toRem(14);
+    }
+}
+
+.px-32 {
+    padding: 0 16px !important;
+    @media (min-width: $device-md) {
+        padding: 0 32px !important;
+    }
+}
+
+.py-24 {
+    padding: 16px 0 !important;
+    @media (min-width: $device-md) {
+        padding: 24px 0 !important;
+    }
+}
+
+.p-32 {
+    padding: 16px;
+    @media (min-width: $device-md) {
+        padding: 32px;
+    }
+}
+
+.py-9 {
+    padding: 9px 0px !important;
+}
+
+.shadow_sm {
+    box-shadow: -1px 2px 4px 0px rgba(0, 0, 0, 0.1) !important;
+}

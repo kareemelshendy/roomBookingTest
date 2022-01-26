@@ -1,0 +1,8 @@
+@use "../../styles/functions" as *;
+@use "../../styles/variables" as *;
+.create_cont {
+    padding: 32px;
+    @media (min-width: $device-md) {
+        padding: 32px 97px;
+    }
+}

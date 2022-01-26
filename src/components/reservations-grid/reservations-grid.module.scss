@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+@use "../../styles//functions" as *;
+.col {
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px;
+}
+
+.room_container {
+    width: 100%;
+    display: grid;
+    // background-color: red;
+    margin-bottom: 32px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 21px;
+    grid-row-gap: 21px;
+    @media (min-width: $device-sm) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $device-lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.noData {
+    width: 100%;
+    // background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

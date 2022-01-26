@@ -1,0 +1,12 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_button {
+        width: 100px;
+        &:not(:last-child) {
+            margin-left: 20px;
+        }
+    }
+}

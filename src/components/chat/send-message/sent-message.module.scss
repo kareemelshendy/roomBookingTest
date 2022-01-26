@@ -1,0 +1,130 @@
+@use "../../../styles/functions" as *;
+@use "../../../styles/mixins" as *;
+@use "../../../styles/variables" as *;
+.send_message {
+    border: 1px solid $light;
+    border-radius: 0px 0px 0px 8px;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    .submit {
+        width: 20%;
+        @media (min-width: $device-md) {
+            width: 10%;
+        }
+        height: 100%;
+        // background-color: red;
+        @include align-center;
+        &_button {
+            color: $light-grey;
+            font-weight: 400;
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+    }
+    .group {
+        width: 80%;
+        @media (min-width: $device-md) {
+            width: 90%;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14.5px 8.5px 13.5px 14px;
+        border-left: 1px solid $light;
+    }
+    .inputContainer {
+        width: 70%;
+        @media (min-width: $device-md) {
+            width: 85%;
+        }
+    }
+    .sendMessage_input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: toRem(12);
+        line-height: 23px;
+        padding: 0px;
+        overflow-y: auto;
+        margin-bottom: 10px;
+    }
+    .inputFile {
+        display: none;
+    }
+    .uploadImage {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: $light-grey;
+        i {
+            font-weight: 400 !important;
+        }
+    }
+}
+
+.image_button {
+    border: 1px solid $light;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    .image {
+        border-radius: 8px;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        position: relative;
+        margin-left: 16px;
+    }
+    .delete {
+        position: absolute;
+        left: 10px;
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        i {
+            font-size: 20px;
+            color: $light;
+        }
+    }
+    button {
+        border: none;
+        background-color: $white;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        position: relative;
+    }
+    i {
+        font-size: 32px;
+        font-weight: 400;
+        color: $light;
+    }
+    &:not(:last-child) {
+        margin-left: 8.5px;
+        margin-bottom: 10px;
+        @media (min-width: $device-sm) {
+            margin-bottom: 0px;
+        }
+        @media (min-width: $device-md) {
+            margin-bottom: 10px;
+        }
+        @media (min-width: $device-lg) {
+            margin-bottom: 0px;
+            // margin-left: 0px;
+        }
+    }
+}
+
+.images {
+    display: flex;
+    width: 100%;
+    // background-color: red;
+    flex-wrap: wrap;
+    @media (min-width: $device-lg) {
+        // justify-content: space-between;
+    }
+}

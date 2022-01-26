@@ -1,0 +1,29 @@
+@use "../../styles/variables" as *;
+.request_owner {
+    // margin-top: 16px;
+    margin-left: 0px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    width: 100%;
+    h3 {
+        line-height: 24px;
+        margin-bottom: 16px;
+    }
+    p {
+        line-height: 24px;
+    }
+    .button {
+        width: 129px;
+        margin-top: 10px;
+        i {
+            margin-left: 14px;
+            font-size: toRem(18);
+        }
+    }
+    @media (min-width: $device-md) {
+        // margin-left: 5px;
+    }
+}

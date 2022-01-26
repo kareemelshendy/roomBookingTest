@@ -1,0 +1,11 @@
+@use "../../../styles/functions" as *;
+@use "../../../styles/variables" as *;
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    // background-color: red;
+    @media (min-width: $device-md) {
+        flex-direction: row;
+    }
+}

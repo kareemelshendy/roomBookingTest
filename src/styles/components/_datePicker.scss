@@ -1,0 +1,94 @@
+@use "../variables" as *;
+@use "../functions" as *;
+.react-datepicker-wrapper {
+    width: 100% !important;
+    .react-datepicker__input-container {
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+}
+
+.react-datepicker {
+    border: none !important;
+    width: 255px;
+    direction: ltr;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+    @media (min-width: $device-md) {
+        width: 300px;
+    }
+    &__triangle::after {
+        border-bottom-color: $white !important;
+        left: 48px !important;
+    }
+    &__triangle::before {
+        left: 48px !important;
+    }
+    &__navigation {
+        top: 50% !important;
+        transform: translateY(-50%);
+        width: 40px !important;
+        height: 40px !important;
+        @media (min-width: $device-md) {
+            width: 49px !important;
+            height: 49px !important;
+        }
+        &--previous,
+        &--next {
+            background-color: $white !important;
+            box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+            display: flex !important;
+            align-items: center !important;
+            border-radius: 50% !important;
+        }
+        &--previous {
+            left: -20px !important;
+            @media (min-width: $device-md) {
+                right: -23px !important;
+            }
+        }
+        &--next {
+            right: -23px !important;
+        }
+        &-icon--previous::before,
+        &-icon--next::before {
+            border-color: $primary !important;
+            border-width: 2px 2px 0 0 !important;
+            top: 12px !important;
+        }
+        &-icon--previous::before {
+            left: -7px !important;
+        }
+        &-icon--next::before {
+            // right: -5px !important;
+            left: -3px !important;
+        }
+    }
+    &__month-container {
+        width: 100%;
+    }
+    &__header {
+        background-color: $white !important;
+    }
+    &__current-month {
+        color: $light-grey !important;
+        font-size: toRem(16) !important;
+        font-family: "Cairo" !important;
+        font-weight: 400 !important;
+    }
+    &__day-name {
+        font-size: toRem(12);
+        font-weight: bold;
+        color: $light-grey !important;
+    }
+    &__day--selected {
+        border-radius: 50% !important;
+        background-color: $primary !important;
+        font-size: toRem(14) !important;
+        font-weight: 400 !important;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+    &__day--in-selecting-range {
+        border-radius: 50% !important;
+    }
+}

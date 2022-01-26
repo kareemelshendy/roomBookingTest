@@ -1,0 +1,19 @@
+@use "../variables" as *;
+@use "../functions" as *;
+.input {
+    padding: 12.5px 8.5px !important;
+    border-radius: 8px !important;
+    font-size: toRem(14) !important;
+    line-height: 24px !important;
+    // margin-top: 6px;
+    box-shadow: none !important;
+    &_normal {
+        &:focus {
+            border-color: $primary !important;
+        }
+    }
+    &_error {
+        border-color: $fav !important;
+        // box-shadow: none;
+    }
+}

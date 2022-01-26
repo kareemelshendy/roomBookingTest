@@ -1,0 +1,98 @@
+@use "../../styles/variables" as *;
+@use "../../styles/functions" as *;
+.profile_top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: $device-lg) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $device-lg) {
+            flex-direction: row;
+        }
+    }
+    .button {
+        width: 200px;
+        align-self: center;
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+        @media (min-width: $device-lg) {
+            width: 130px;
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+        }
+        button {
+            line-height: 30px;
+            i {
+                margin-left: 16px;
+                font-size: 18px;
+            }
+        }
+        @media (min-width: $device-lg) {
+            &:not(:last-child) {
+                margin-left: 16px;
+            }
+        }
+    }
+    .profile_container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: -85px;
+        @media (min-width: $device-lg) {
+            flex-direction: row;
+            align-items: flex-end;
+        }
+        .profile_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 16px;
+            // margin-bottom: 16px;
+            @media (min-width: $device-lg) {
+                margin-right: 16px;
+                margin-bottom: 0px;
+                align-items: flex-start;
+            }
+            p {
+                font-size: toRem(14);
+                font-weight: 700;
+                line-height: 18px;
+                color: $gold;
+                i {
+                    margin-left: 4px;
+                }
+            }
+            .profile_usename {
+                font-size: toRem(18);
+                font-weight: 700;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+.room {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px 16px;
+    @media (min-width: $device-md) {
+        padding: 32px;
+    }
+}
+
+.content {
+    padding: 0px;
+}

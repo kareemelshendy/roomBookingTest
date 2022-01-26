@@ -1,0 +1,169 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/functions" as *;
+.form_container {
+    // width: 100%;
+    position: relative;
+    margin-top: 20px;
+    z-index: 6;
+    @media (min-width: $device-md) {
+        // margin-top: -32px;
+        margin-top: 0;
+    }
+    .form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        flex-direction: column-reverse;
+        border-radius: 8px;
+        position: relative;
+        // position: absolute;
+        padding: 4px 17px;
+        @media (min-width: $device-md) {
+            flex-direction: row;
+            // margin-top: -32px;
+            flex-direction: row;
+        }
+        .group {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            width: 100%;
+            border-bottom: 1px solid $light;
+            position: relative;
+            padding: 20px 0;
+            // &:not(:first-child):not(:nth-child(2)) {}
+            &:first-child,
+            &:nth-child(2) {
+                border-bottom: 0;
+            }
+            &:not(:last-child) {
+                .label {
+                    margin-right: 0px;
+                    @media (min-width: $device-md) {
+                        margin-right: 15px;
+                    }
+                }
+            }
+            .label {
+                font-size: toRem(14);
+                font-weight: 600;
+                label {
+                    margin-left: auto;
+                    margin-right: 8px;
+                }
+                i {
+                    font-size: toRem(14);
+                }
+            }
+            @media (min-width: $device-md) {
+                width: 25%;
+                padding: 0px !important;
+                border-bottom: 0px;
+                &:not(:first-child):not(:last-child) {
+                    border-right: 1px solid $light !important;
+                }
+            }
+            .location {
+                // margin-right: 14px;
+                font-size: toRem(14);
+                line-height: 24px;
+                color: $light-grey;
+                margin-right: 2px;
+                margin-left: 20px;
+                margin-bottom: 0px;
+                cursor: pointer;
+                margin-right: 18px;
+                @media (min-width: $device-md) {}
+            }
+            .date {
+                display: flex;
+                width: 100%;
+                justify-content: flex-end;
+                margin-right: 5px;
+                @media (min-width: $device-md) {
+                    // width: 100%;
+                    // justify-content: space-between;
+                    padding-right: 0px;
+                    flex-direction: column-reverse;
+                }
+                @media (min-width: $device-lg) {
+                    // width: 100%;
+                    // justify-content: space-between;
+                    padding-right: 0px;
+                    flex-direction: row;
+                }
+                @media (min-width: $device-xl) {
+                    width: 95%;
+                }
+                p {
+                    font-size: toRem(14);
+                    line-height: 24px;
+                    color: $light-grey;
+                    margin-bottom: 0;
+                    width: 30%;
+                    text-align: right;
+                    margin-right: 10px;
+                    @media (min-width: $device-md) {
+                        width: 100%;
+                    }
+                    @media (min-width: $device-lg) {
+                        width: 40%;
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+        .datePicker {
+            width: 80% !important;
+            border: none;
+            box-shadow: none !important;
+            direction: rtl;
+            color: $light-grey;
+            cursor: pointer;
+            @media (min-width: $device-md) {
+                width: 100%;
+            }
+            @media (min-width: $device-lg) {
+                width: 50%;
+            }
+            &:focus {
+                outline-color: transparent;
+            }
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            // background-color: red;
+            margin-bottom: 20px;
+            @media (min-width: $device-md) {
+                margin-bottom: 0px;
+                width: 34px;
+            }
+            button {
+                background-color: primary;
+                // border-radius: 50%;
+                color: white;
+                border: none;
+                // width: 34px;
+                // height: 34px;
+                width: 100%;
+                padding: 10px 0px;
+                border-radius: 8px;
+                @media (min-width: $device-md) {
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 50%;
+                    padding: 0;
+                }
+                i {
+                    font-weight: 400 !important;
+                }
+            }
+            // position: absolute;
+            // inset: 11px 17px 0px 11px;
+        }
+    }
+}

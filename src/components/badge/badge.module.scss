@@ -1,0 +1,11 @@
+@use "../../styles/variables" as *;
+.services_badge {
+    // margin-bottom: 16px;
+    &:not(:last-child) {
+        margin-left: 8px;
+        margin-bottom: 8px;
+        @media (min-width: $device-md) {
+            margin-bottom: 0px;
+        }
+    }
+}

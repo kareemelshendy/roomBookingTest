@@ -1,0 +1,137 @@
+@use "../../styles/functions" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+.row {
+    display: flex;
+    flex-direction: column-reverse;
+    @media (min-width: $device-md) {
+        flex-direction: row;
+    }
+}
+
+.room_container {
+    padding: 10px;
+    width: 100%;
+    @media (min-width: $device-md) {
+        padding: 32px;
+    }
+    .room_swiper {
+        width: 100%;
+        // height: 349px;
+    }
+    .room_title {
+        width: 100%;
+        margin-top: 32px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $light;
+        h2 {
+            line-height: 34px;
+        }
+    }
+    .room_details {
+        padding: 16px 0;
+        border-bottom: 1px solid $light;
+        h3 {
+            font-size: toRem(18);
+            line-height: 30px;
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: toRem(18);
+            line-height: 30px;
+            color: $dark-grey;
+            margin-bottom: 0px;
+        }
+    }
+    .services {
+        border-bottom: 1px solid $light;
+        width: 100%;
+        h3 {
+            font-size: toRem(18);
+            line-height: 30px;
+            margin-bottom: 12px;
+        }
+        .services_content {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            @media (min-width: $device-sm) {
+                flex-direction: row;
+            }
+            div {
+                // width: 100%;
+                color: $white;
+                @include align-center;
+                flex-direction: column;
+                background-color: $gold;
+                padding: 2px 8px;
+                border-radius: 8px;
+                margin-bottom: 16px;
+                @media (min-width: $device-sm) {
+                    flex-direction: row;
+                }
+                p {
+                    margin: 0;
+                    font-size: toRem(14);
+                    line-height: 25px;
+                    @media (min-width: $device-sm) {
+                        margin-right: 8px;
+                    }
+                    i {
+                        margin-left: 2px;
+                    }
+                }
+                &:not(:last-child) {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+    .location {
+        position: relative;
+        width: 100%;
+        height: 308px;
+        h3 {
+            font-size: toRem(18);
+            line-height: 30px;
+            margin-bottom: 12px;
+        }
+        .map {
+            width: 100%;
+            height: 266px;
+        }
+    }
+}
+
+.list {
+    margin-left: 0px;
+    border-radius: 8px;
+    list-style: none;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $device-md) {
+        // margin-left: 5px;
+    }
+    .list_item {
+        font-size: toRem(14);
+        padding: 4px;
+        font-weight: 600;
+        line-height: 24px;
+        border-right: 1px solid transparent;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+        a {
+            color: $secondary;
+        }
+        &:hover {
+            border-color: $primary;
+            // background-color: #f0f6ff;
+            background-color: #fbfbfb;
+            a {
+                color: $primary;
+            }
+        }
+    }
+}

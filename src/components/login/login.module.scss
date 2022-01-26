@@ -1,0 +1,83 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/functions" as *;
+.login_container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    .right {
+        display: none;
+        @media (min-width: 1200px) {
+            width: 50%;
+            background-image: url("/bedroom.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: block;
+            .overlay {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+    .left {
+        width: 100%;
+        padding: 32px 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        @media (min-width: 1200px) {
+            padding: 32px 120px 32px 140px;
+            width: 50%;
+            align-items: stretch;
+        }
+        .login_logo {
+            display: flex;
+            justify-content: flex-start;
+            min-width: 190px;
+            &>h1 {
+                margin-right: 8px;
+            }
+            &>div {
+                &>h3 {
+                    line-height: 0px;
+                    margin-top: 8px;
+                }
+            }
+            .logotitle {
+                margin-left: 8px;
+            }
+        }
+        .formContainer {
+            width: 100%;
+            @include align-center;
+            display: flex;
+            margin-top: 50px;
+            @media (min-width: 1200px) {
+                margin-top: 0px;
+                display: flex;
+                // align-items: stretch;
+                justify-content: flex-end !important;
+                margin-top: 50px;
+            }
+            .loginForm {
+                width: 350px;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                // margin-left: 90px;
+                @media (min-width: 576px) {
+                    width: 500px;
+                }
+                @media (min-width: 1200px) {
+                    width: 374px;
+                }
+                @media (min-width: 1700px) {
+                    width: 500px;
+                }
+            }
+        }
+    }
+}

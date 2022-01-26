@@ -1,0 +1,257 @@
+@use "../../styles/variables" as *;
+@use "../../styles/functions" as *;
+.row {
+    display: flex;
+    flex-direction: column-reverse;
+    @media (min-width: $device-md) {
+        flex-direction: row;
+    }
+}
+
+.request_container {
+    padding: 10px;
+    width: 100%;
+    @media (min-width: $device-md) {
+        padding: 32px;
+    }
+    h2 {
+        line-height: 34px;
+    }
+    .request_info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 16px 0;
+        border-bottom: 1px solid $light-grey;
+        @media (min-width: $device-md) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .infoTitle {
+            margin-bottom: 8px;
+        }
+        .status {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 16px;
+            @media (min-width: $device-sm) {
+                width: 50%;
+                border-left: 1px solid $light-grey;
+            }
+            @media (min-width: $device-lg) {
+                width: 20%;
+                border-left: 1px solid $light-grey;
+                border-bottom: 0px;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+                align-items: flex-start;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @media (min-width: $device-md) {
+                    display: block;
+                }
+            }
+            h3 {
+                margin-bottom: 16px;
+            }
+        }
+        .numberOfUsers,
+        .date {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 16px;
+            border-top: 1px solid $light-grey;
+            padding-top: 16px;
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @media (min-width: $device-md) {
+                    display: block;
+                }
+            }
+        }
+        .numberOfUsers {
+            @media (min-width: $device-sm) {
+                width: 50%;
+                border-top: 0;
+                padding-top: 0px;
+            }
+            @media (min-width: $device-lg) {
+                border-left: 1px solid $light-grey;
+                width: 20%;
+                padding-top: 0px;
+                margin-bottom: 0px;
+            }
+            p {
+                width: 45px;
+                padding: 2px 8px;
+                margin-bottom: 0px;
+                background-color: $gold;
+                border-radius: 8px;
+                color: $white;
+                font-size: toRem(16);
+                line-height: 25px;
+                font-weight: 700;
+                margin-top: 16px;
+            }
+        }
+        .date {
+            @media (min-width: $device-sm) {
+                width: 50%;
+            }
+            @media (min-width: $device-lg) {
+                width: 20%;
+                border-top: 0px;
+                padding-top: 0px;
+                border-left: 1px solid $light-grey;
+                margin-bottom: 0px;
+            }
+            p {
+                font-size: toRem(16);
+                line-height: 34px;
+                color: $secondary;
+                font-weight: 700;
+                margin-bottom: 0px;
+            }
+        }
+        .price {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 16px;
+            border-top: 1px solid $light-grey;
+            padding-top: 16px;
+            @media (min-width: $device-lg) {
+                width: 20%;
+                border-top: 0px;
+                padding-top: 0px;
+                // borde: 1px solid $light-grey;
+                margin-bottom: 0px;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @media (min-width: $device-md) {
+                    display: block;
+                }
+            }
+            p {
+                font-size: toRem(24);
+                line-height: 29px;
+                font-weight: 700;
+                color: $gold;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .notes {
+        width: 100%;
+        margin-top: 16px;
+        @media (min-width: $device-lg) {
+            margin-top: 26px;
+        }
+        h3 {
+            line-height: 30px;
+            font-size: toRem(18);
+            margin-bottom: 12px;
+        }
+        p {
+            line-height: 30px;
+            font-size: toRem(18);
+            color: $dark-grey;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.buttons {
+    width: 100%;
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .button {
+        width: 179px;
+        margin-top: 16px;
+    }
+    @media (min-width: $device-md) {
+        flex-direction: row;
+        .button {
+            margin-left: 16px;
+        }
+    }
+}
+
+.list {
+    margin-left: 0px;
+    border-radius: 8px;
+    list-style: none;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $device-md) {
+        // margin-left: 5px;
+    }
+    .list_item {
+        font-size: toRem(14);
+        padding: 4px;
+        font-weight: 600;
+        line-height: 24px;
+        border-right: 1px solid transparent;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+        a {
+            color: $secondary;
+        }
+        &:hover {
+            border-color: $primary;
+            // background-color: #f0f6ff;
+            background-color: #fbfbfb;
+            a {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.request_owner {
+    margin-top: 16px;
+    margin-left: 0px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    h3 {
+        line-height: 24px;
+        margin-bottom: 16px;
+    }
+    p {
+        line-height: 24px;
+    }
+    .button {
+        width: 129px;
+        margin-top: 10px;
+        i {
+            margin-left: 14px;
+            font-size: toRem(18);
+        }
+    }
+    @media (min-width: $device-md) {
+        // margin-left: 5px;
+    }
+}

@@ -1,0 +1,139 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/functions" as *;
+.roomTop {
+    width: 100%;
+    text-align: right;
+    border-bottom: 1px solid $light;
+    h2 {
+        direction: rtl;
+        line-height: 34px;
+        margin-bottom: 16px;
+    }
+    .titleContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        @media (min-width: $device-md) {
+            flex-direction: row;
+        }
+        .buttons {
+            width: 100%;
+            // background-color: red;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            @media (min-width: $device-sm) {
+                .buttonIcon {
+                    margin-left: 8px;
+                }
+            }
+            @media (min-width: $device-md) {
+                width: 60%;
+                margin-top: 0;
+            }
+            @media (min-width: $device-lg) {
+                width: 45%;
+            }
+            .favButton {
+                width: 130px;
+                margin-left: 16px;
+            }
+            .bookButton {
+                width: 177px;
+            }
+        }
+        .priceAndUser {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            @media (min-width: $device-md) {
+                width: 60%;
+                margin-top: 0;
+            }
+            @media (min-width: $device-lg) {
+                width: 45%;
+            }
+            .price {
+                p {
+                    margin-bottom: 0px;
+                    font-weight: 700;
+                    font-size: toRem(24);
+                    line-height: 29px;
+                    color: $gold;
+                    text-align: right;
+                    direction: ltr;
+                }
+            }
+            .users {
+                padding: 5px 8px;
+                border-radius: 8px;
+                background-color: $gold;
+                color: $white;
+                display: flex;
+                align-items: center;
+                margin-right: 14px;
+                p {
+                    font-size: toRem(16);
+                    margin: 0 4px 0 4px;
+                    line-height: 25px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.details {
+    border-bottom: 1px solid $light;
+    h3 {
+        font-size: toRem(18);
+        line-height: 30px;
+        margin-bottom: 12px;
+    }
+    p {
+        font-size: toRem(15);
+        line-height: 30px;
+        color: $dark-grey;
+        @media (min-width: $device-md) {
+            font-size: toRem(18);
+        }
+    }
+}
+
+.services {
+    border-bottom: 1px solid $light;
+    width: 100%;
+    h3 {
+        font-size: toRem(18);
+        line-height: 30px;
+        margin-bottom: 12px;
+    }
+    .services_content {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+        @media (min-width: $device-sm) {
+            flex-direction: row;
+        }
+    }
+}
+
+.location {
+    position: relative;
+    width: 100%;
+    height: 308px;
+    h3 {
+        font-size: toRem(18);
+        line-height: 30px;
+        margin-bottom: 12px;
+    }
+    .map {
+        width: 100%;
+        height: 266px;
+    }
+}

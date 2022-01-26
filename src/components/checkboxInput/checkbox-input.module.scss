@@ -1,0 +1,11 @@
+@use "../../styles/variables" as *;
+@use "../../styles/functions" as *;
+.service_group {
+    &:not(:last-child) {
+        margin-left: 8px;
+        margin-bottom: 16px;
+    }
+    .service_label {
+        cursor: pointer;
+    }
+}

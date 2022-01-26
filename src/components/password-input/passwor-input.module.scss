@@ -1,0 +1,43 @@
+@use "../../styles/variables" as *;
+@use "../../styles//functions" as *;
+.group {
+    position: relative;
+    .passwordIcon {
+        cursor: pointer;
+        i {
+            position: absolute;
+            top: 47px;
+            left: 16px;
+        }
+    }
+    .span_red {
+        color: $fav;
+    }
+    label {
+        margin-right: 8px;
+        font-size: toRem(14);
+        line-height: 24px;
+        margin-bottom: 6px;
+        span {
+            color: $fav;
+        }
+    }
+    .forget {
+        display: block;
+        margin-right: 8px;
+        font-size: toRem(12);
+        color: $primary;
+        line-height: 23px;
+    }
+}
+
+.errorMessage {
+    font-size: toRem(12);
+    margin-top: 6px;
+    margin-right: 8px;
+    line-height: 23px;
+    color: $fav;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+}

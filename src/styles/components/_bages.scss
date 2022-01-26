@@ -1,0 +1,86 @@
+@use "../functions" as *;
+@use "../variables" as *;
+.badge {
+    padding: 2px 8px !important;
+    border-radius: 8px !important;
+    font-size: toRem(14) !important;
+    line-height: 25px !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+    span {
+        margin-left: 8px !important;
+    }
+}
+
+.badge-yellow {
+    background-color: $yellow !important;
+}
+
+.badge-green {
+    background-color: $green !important;
+}
+
+.badge-blue {
+    background-color: $primary !important;
+}
+
+.badge-red {
+    background-color: $fav !important;
+}
+
+.badge-grey {
+    background-color: $dark-grey !important;
+}
+
+.badge-input {
+    border: 1px solid $light !important;
+    color: $light-grey !important;
+    .icon-air-conditioner:before {
+        content: "\e900";
+        color: $light-grey;
+    }
+    .icon-balcony:before {
+        content: "\e901";
+        color: $light-grey;
+    }
+    .icon-kitchen:before {
+        content: "\e902";
+        color: $light-grey;
+    }
+    .icon-parking:before {
+        content: "\e903";
+        color: $light-grey;
+    }
+    .icon-pool:before {
+        content: "\e904";
+        color: $light-grey;
+    }
+    .icon-room-service:before {
+        content: "\e905";
+        color: $light-grey;
+    }
+    .icon-wifi:before {
+        content: "\e906";
+        color: $light-grey;
+    }
+}
+
+.input {
+    display: none;
+    &:checked+.label {
+        .badge-input {
+            background-color: $primary;
+            color: $white !important;
+            border-color: transparent;
+            .icon-wifi:before,
+            .icon-room-service:before,
+            .icon-pool:before,
+            .icon-parking:before,
+            .icon-kitchen:before,
+            .icon-balcony:before,
+            .icon-air-conditioner:before {
+                color: $white;
+            }
+        }
+    }
+}

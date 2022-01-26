@@ -1,0 +1,57 @@
+@use "../../styles/variables" as *;
+@use "../../styles/functions" as *;
+.profile_top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: $device-md) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .button {
+        width: 129px;
+        button {
+            color: $primary !important;
+            line-height: 30px;
+        }
+    }
+    .profile_container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: -85px;
+        @media (min-width: $device-md) {
+            flex-direction: row;
+            align-items: flex-end;
+        }
+        .profile_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // margin-right: 16px;
+            // margin-bottom: 16px;
+            @media (min-width: $device-md) {
+                margin-right: 16px;
+                margin-bottom: 0px;
+                align-items: flex-start;
+            }
+            p {
+                font-size: toRem(14);
+                font-weight: 700;
+                line-height: 18px;
+                color: $gold;
+                i {
+                    margin-left: 4px;
+                }
+            }
+            .profile_usename {
+                font-size: toRem(18);
+                font-weight: 700;
+                line-height: 34px;
+            }
+        }
+    }
+}

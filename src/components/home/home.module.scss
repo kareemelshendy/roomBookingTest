@@ -1,0 +1,104 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+.container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 32px;
+    .map_overlay {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba($dark, 0.5);
+        padding-top: 200px;
+        .map_container {
+            width: 100%;
+            height: 500px;
+            // z-index: ;
+            // padding: 10px;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            padding: 0 10px;
+            // background-color: red;
+            @media (min-width: $device-md) {
+                top: 30%;
+                transform: translateY(-50%);
+                height: 722px;
+                // padding: 0 px;
+            }
+            @media (min-width: $device-lg) {
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0px;
+            }
+            .map {
+                position: relative;
+                width: 100%;
+                height: 500px;
+                // background-color: red;
+                @media (min-width: $device-md) {
+                    width: 765px;
+                    height: 722px;
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+                    // width: 0px;
+                    margin-top: 0px;
+                }
+                .exit {
+                    color: $primary;
+                    background-color: $white;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    border: none;
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+    .header {
+        width: 100%;
+        height: 340px;
+        background-image: url("/bedroom-interior-living-.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        @media (min-width: device-md) {
+            background-position: center;
+        }
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#ffffff, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .content {
+                width: 100%;
+                padding: 0 20px;
+                @media (min-width: $device-sm) {
+                    padding: 0px;
+                    width: 550px;
+                    h1 {
+                        line-height: 56px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.grid {
+    min-height: 450px;
+    .pagination {
+        margin-top: auto;
+    }
+}
